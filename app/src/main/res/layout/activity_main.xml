@@ -44,7 +44,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="90dp"
                 android:text="Del"
-                android:textColor="@color/red" />
+                android:textColor="@color/white"
+                android:background="@color/red" />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_bracket_left"
                 style="@style/Button_Style"
