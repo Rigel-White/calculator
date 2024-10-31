@@ -69,10 +69,10 @@ class MainActivity : AppCompatActivity() {
                 addToInputText(".")
             }
             binding.buttonDivision.setOnClickListener {
-                addToInputText("/")
+                addToInputText("÷")
             }
             binding.buttonMultiply.setOnClickListener {
-                addToInputText("*")
+                addToInputText("×")
             }
             binding.buttonSubtraction.setOnClickListener {
                 addToInputText("-")
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    //djhfjsdhjfh
+
     // Функция для добавления текста к полю ввода
     private fun addToInputText(value: String) {
         binding.input.append(value)// Добавляем переданное значение в конец поля
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun showResult() {
         try {
-            val expression = getInputExpression().replace("%", "/100") //
+            val expression = getInputExpression().replace("%", "/100").replace("÷", "/").replace("×", "*")
 
             val result = ExpressionBuilder(expression).build().evaluate()
             binding.output.text =
